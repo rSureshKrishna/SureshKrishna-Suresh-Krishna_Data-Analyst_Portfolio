@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!--=============== CHART.JS ===============-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+
+    <title> Suresh's Portfolio </title>
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Suresh Krishna</a>
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item ">
+                        <a href="#home" class="nav__link">
+                            <i class='bx bx-home'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item ">
+                        <a href="#about" class="nav__link">
+                            <i class='bx bx-user'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class='bx bx-code-alt'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#education" class="nav__link">
+                            <i class='bx bx-book'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#work" class="nav__link">
+                            <i class='bx bx-briefcase-alt-2'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class='bx bx-message-square-dots'></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--=============== theme change button ===============-->
+            <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
+
+        </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <span class="home__greeting">Hello, I'm</span>
+                    <h1 class="home__name">Suresh Krishna</h1>
+                    <h3 class="home__education">Data Analyst <span>| Power BI Developer <span>| Python & SQL Expert</span></h3>
+
+                    <div class="home__button">
+                        <a download="Suresh-Krishna-R_Data-Analyst" href="assets/pdf/Suresh-Krishna-R_Data-Analyst.pdf" class="button button--ghost">
+                            Download CV
+                        </a>
+
+                        <a href="#about" class="button">About</a>
+                    </div>
+                </div>
+
+                <div class="home__handle">
+                    <img src="assets/img/me.png" alt="" class="home__img">
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/sur-kri104" target="_blank"
+                        class="home__social-link">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://github.com/rSureshKrishna" target="_blank" class="home__social-link">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://wa.me/919342470575 " target="_blank" class="home__social-link">
+                        <i class='bx bxl-whatsapp'></i>
+                    </a>
+                </div>
+
+                <a href="#about" class="home__scroll">
+                    <i class='bx bx-mouse home__scroll-icon'></i>
+                    <span class="home__scroll-name">Scroll Down</span>
+                </a>
+            </div>
+        </section>
+
+        <!--=============== ABOUT ===============-->
+        <section class="about section" id="about">
+            <span class="section__subtitle">My Intro</span>
+            <h2 class="section__title">About Me</h2>
+
+            <div class="about__container container grid">
+                <img src="assets/img/sk1.jpg" alt="" class="about__img">
+
+                <div class="about__data">
+                    <div class="about__info">
+                        <div class="about__box">
+                            <i class='bx bx-award about__icon'></i>
+                            <h3 class="about__title">Experience</h3>
+                            <span class="about__subtitle">Fresher</span>
+                        </div>
+                        <div class="about__box">
+                            <i class='bx bx-briefcase-alt about__icon'></i>
+                            <h3 class="about__title">Completed</h3>
+                            <span class="about__subtitle">8+ Projects</span>
+                        </div>
+                        <div class="about__box">
+                            <i class='bx bx-support about__icon'></i>
+                            <h3 class="about__title">Support</h3>
+                            <span class="about__subtitle">Online 24/7</span>
+                        </div>
+                    </div>
+
+                    <p class="about__description">
+                        I am an aspiring Data Analyst skilled in SQL, Python, Excel, and Power BI, with experience in data cleaning, analysis, visualization, and dashboard development to support data-driven decision-making.
+                    </p>
+
+                    <a href="#contact" class="button about__button-contact">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== SKILLS ===============-->
+        <section class="skills section" id="skills">
+            <span class="section__subtitle">My Abilities</span>
+            <h2 class="section__title">Technical Skills</h2>
+
+            <!-- KPI ROW -->
+            <div class="sk-kpi-row container">
+                <div class="sk-kpi-card sk-kpi--purple">
+                    <i class='bx bx-bar-chart-alt-2 sk-kpi-icon'></i>
+                    <div class="sk-kpi-num" data-target="4">7</div>
+                    <div class="sk-kpi-label">Projects Built</div>
+                </div>
+                <div class="sk-kpi-card sk-kpi--blue">
+                    <i class='bx bx-data sk-kpi-icon'></i>
+                    <div class="sk-kpi-num" data-target="5">8</div>
+                    <div class="sk-kpi-label">Certifications</div>
+                </div>
+                <div class="sk-kpi-card sk-kpi--teal">
+                    <i class='bx bx-trophy sk-kpi-icon'></i>
+                    <div class="sk-kpi-num" data-target="10">8</div>
+                    <div class="sk-kpi-label">Papers Presented</div>
+                </div>
+                <div class="sk-kpi-card sk-kpi--rose">
+                    <i class='bx bx-code-alt sk-kpi-icon'></i>
+                    <div class="sk-kpi-num" data-target="12">5</div>
+                    <div class="sk-kpi-label">Tools Mastered</div>
+                </div>
+            </div>
+
+            
+
+            <!-- 2×2 CHART GRID — one chart per skill category -->
+            <div class="sk-chart-grid container">
+
+                <!-- 1. Data Analysis — Horizontal Bar -->
+                <div class="sk-chart-card">
+                    <div class="sk-chart-header">
+                        <div>
+                            <div class="sk-chart-title"><i class='bx bx-bar-chart-alt-2'></i> Data Analysis</div>
+                            <div class="sk-chart-sub">Cleaning · EDA · KPI · Dashboards</div>
+                        </div>
+                        <span class="sk-chart-badge sk-badge--purple">H-Bar</span>
+                    </div>
+                    <div class="sk-chart-constrain">
+                        <canvas id="chartDataAnalysis"></canvas>
+                    </div>
+                </div>
+
+                <!-- 2. SQL Skills — Radar -->
+                <div class="sk-chart-card">
+                    <div class="sk-chart-header">
+                        <div>
+                            <div class="sk-chart-title"><i class='bx bx-data'></i> SQL Skills</div>
+                            <div class="sk-chart-sub">Queries · CTEs · Optimization · Views</div>
+                        </div>
+                        <span class="sk-chart-badge sk-badge--blue">Radar</span>
+                    </div>
+                    <div class="sk-chart-constrain">
+                        <canvas id="chartSQL"></canvas>
+                    </div>
+                </div>
+
+                <!-- 3. Tools & Technologies — Polar Rings -->
+              <div class="sk-chart-card">
+    <div class="sk-chart-header">
+        <div>
+            <div class="sk-chart-title"><i class='bx bx-wrench'></i> Tools &amp; Technologies</div>
+            <div class="sk-chart-sub">Excel · MySQL · Python · Power BI</div>
+        </div>
+        <span class="sk-chart-badge sk-badge--teal">Bar Chart</span>
+    </div>
+    <div class="sk-bar-list">
+        <div class="sk-bar-item">
+            <div class="sk-bar-label"><span>MS Excel</span><span>90%</span></div>
+            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:90%;--clr:#4ade80"></div></div>
+        </div>
+        <div class="sk-bar-item">
+            <div class="sk-bar-label"><span>MySQL Workbench</span><span>85%</span></div>
+            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:85%;--clr:#34d399"></div></div>
+        </div>
+        <div class="sk-bar-item">
+            <div class="sk-bar-label"><span>Python (Pandas, NumPy)</span><span>82%</span></div>
+            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:82%;--clr:#6ee7b7"></div></div>
+        </div>
+        <div class="sk-bar-item">
+            <div class="sk-bar-label"><span>Power BI</span><span>88%</span></div>
+            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:88%;--clr:#a7f3d0"></div></div>
+        </div>
+    </div>
+</div>  
+
+                <!-- 4. DB & Data Concepts — Doughnut-style grouped bar -->
+                <div class="sk-chart-card">
+    <div class="sk-chart-header">
+        <div>
+            <div class="sk-chart-title"><i class='bx bx-layer'></i> DB &amp; Data Concepts</div>
+            <div class="sk-chart-sub">ETL · Modeling · Quality · Cloud SQL</div>
+        </div>
+        <span class="sk-chart-badge sk-badge--rose">Pie Chart</span>
+    </div>
+    <div class="sk-chart-constrain">
+        <canvas id="chartDB"></canvas>
+    </div>
+</div>
+
+<div class="sk-chart-card">
+    <div class="sk-chart-header">
+        <div>
+            <div class="sk-chart-title"><i class='bx bx-bar-chart-square'></i> Power BI</div>
+            <div class="sk-chart-sub">DAX · Power Query · KPI · Dashboard</div>
+        </div>
+        <span class="sk-chart-badge sk-badge--yellow">Bar Chart</span>
+    </div>
+    <div class="sk-bar-list">
+        <div class="sk-bar-item">
+            <div class="sk-bar-label"><span>Data Visualization</span><span>92%</span></div>
+            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:92%;--clr:#fbbf24"></div></div>
+        </div>
+        <div class="sk-bar-item">
+            <div class="sk-bar-label"><span>DAX Functions</span><span>85%</span></div>
+            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:85%;--clr:#f59e0b"></div></div>
+        </div>
+        <div class="sk-bar-item">
+            <div class="sk-bar-label"><span>Power Query</span><span>82%</span></div>
+            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:82%;--clr:#fb923c"></div></div>
+        </div>
+        <div class="sk-bar-item">
+            <div class="sk-bar-label"><span>KPI Reporting</span><span>90%</span></div>
+            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:90%;--clr:#fcd34d"></div></div>
+        </div>
+        <div class="sk-bar-item">
+            <div class="sk-bar-label"><span>Dashboard Development</span><span>88%</span></div>
+            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:88%;--clr:#fdba74"></div></div>
+        </div>
+        <div class="sk-bar-item">
+            <div class="sk-bar-label"><span>Data Transformation</span><span>84%</span></div>
+            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:84%;--clr:#fde68a"></div></div>
+        </div>
+        <div class="sk-bar-item">
+            <div class="sk-bar-label"><span>Power BI Service</span><span>80%</span></div>
+            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:80%;--clr:#f97316"></div></div>
+        </div>
+        <div class="sk-bar-item">
+            <div class="sk-bar-label"><span>Business Intelligence</span><span>86%</span></div>
+            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:86%;--clr:#fbbf24"></div></div>
+        </div>
+    </div>
+</div>
+
+<div class="sk-chart-card">
+    <div class="sk-chart-header">
+        <div>
+            <div class="sk-chart-title"><i class='bx bx-bot'></i> AI &amp; Agentic Tools</div>
+            <div class="sk-chart-sub">OpenAI · Claude · Copilot · Gemini</div>
+        </div>
+        <span class="sk-chart-badge sk-badge--purple">Bar Chart</span>
+    </div>
+    <div class="sk-bar-list">
+        <div class="sk-bar-item">
+            <div class="sk-bar-label"><span>ChatGPT (OpenAI)</span><span>88%</span></div>
+            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:88%;--clr:#a78bfa"></div></div>
+        </div>
+        <div class="sk-bar-item">
+            <div class="sk-bar-label"><span>Claude (Anthropic)</span><span>85%</span></div>
+            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:85%;--clr:#c4b5fd"></div></div>
+        </div>
+        <div class="sk-bar-item">
+            <div class="sk-bar-label"><span>Google AI Studio</span><span>80%</span></div>
+            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:80%;--clr:#ddd6fe"></div></div>
+        </div>
+        <div class="sk-bar-item">
+            <div class="sk-bar-label"><span>GitHub Copilot (VS Code)</span><span>82%</span></div>
+            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:82%;--clr:#818cf8"></div></div>
+        </div>
+        <div class="sk-bar-item">
+            <div class="sk-bar-label"><span>Agentic AI / Automation</span><span>75%</span></div>
+            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:75%;--clr:#6366f1"></div></div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </section>
+
+        <!--=============== EDUCATION ===============-->
+        <section class="education section" id="education">
+            <span class="section__subtitle">My Journey</span>
+            <h2 class="section__title">Education &amp; Certifications</h2>
+            <div class="education__container container grid">
+                <div class="education__column">
+                    <h3 class="education__column-title"><i class='bx bx-graduation'></i> Education</h3>
+                    <div class="education__timeline">
+                        <div class="education__item">
+                            <div class="education__dot"></div>
+                            <div class="education__content">
+                                <span class="education__year">Nov 2022 – May 2026</span>
+                                <h4 class="education__degree">B.E. Computer Science &amp; Engineering</h4>
+                                <p class="education__institution">SKP Engineering College, Thiruvannamalai</p>
+                                <span class="education__grade">CGPA: 8.20 / 10</span>
+                            </div>
+                        </div>
+                        <div class="education__item">
+                            <div class="education__dot"></div>
+                            <div class="education__content">
+                                <span class="education__year">2022</span>
+                                <h4 class="education__degree">12th Grade (Higher Secondary)</h4>
+                                <p class="education__institution">VRP Higher Secondary School, Villupuram</p>
+                                <span class="education__grade">69.8%</span>
+                            </div>
+                        </div>
+                        <div class="education__item">
+                            <div class="education__dot"></div>
+                            <div class="education__content">
+                                <span class="education__year">2020</span>
+                                <h4 class="education__degree">10th Grade (SSLC)</h4>
+                                <p class="education__institution">VRP Higher Secondary School, Villupuram</p>
+                                <span class="education__grade">99.8%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="education__column">
+                    <h3 class="education__column-title"><i class='bx bx-badge-check'></i> Certifications</h3>
+                    <div class="certifications__list">
+                        <div class="cert__card">
+                            <i class='bx bxl-google cert__icon'></i>
+                            <div class="cert__info">
+                                <h4 class="cert__title">Google Cloud Data Analytics</h4>
+                                <p class="cert__desc">BigQuery &amp; Looker for cloud-based data decision-making</p>
+                            </div>
+                        </div>
+                        <div class="cert__card">
+                            <i class='bx bx-chip cert__icon'></i>
+                            <div class="cert__info">
+                                <h4 class="cert__title">IBM: Data Fundamentals</h4>
+                                <p class="cert__desc">Foundational knowledge in data science, analytics &amp; visualization</p>
+                            </div>
+                        </div>
+                        <div class="cert__card">
+                            <i class='bx bx-server cert__icon'></i>
+                            <div class="cert__info">
+                                <h4 class="cert__title">TCS iON: Master Data Management</h4>
+                                <p class="cert__desc">Data governance, quality &amp; organizational data management</p>
+                            </div>
+                        </div>
+                        <div class="cert__card">
+                            <i class='bx bxl-google cert__icon'></i>
+                            <div class="cert__info">
+                                <h4 class="cert__title">Google Cloud Engineering</h4>
+                                <p class="cert__desc">Deploying, managing &amp; scaling apps on Google Cloud</p>
+                            </div>
+                        </div>
+                        <div class="cert__card">
+                            <i class='bx bx-trending-up cert__icon'></i>
+                            <div class="cert__info">
+                                <h4 class="cert__title">Data Analysis – Besant Technologies</h4>
+                                <p class="cert__desc">SQL, Python &amp; Power BI for advanced data analysis</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== SERVICES ===============-->
+        <section class="services section">
+            <span class="section__subtitle">My Services</span>
+            <h2 class="section__title">What I Offer</h2>
+
+            <div class="services__container container grid">
+                <div class="services__card">
+                    <div class="serv">
+                        <h3 class="services__title">Data <br> Analysis</h3>
+
+                        <span class="services__button">
+                            See More <i class='bx bx-right-arrow services__icon'></i>
+                        </span>
+                    </div>
+
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title">Data Analysis</h3>
+
+                            <p class="services__modal-description">
+                                I provide comprehensive data analysis services, transforming complex datasets into
+                                clear, actionable insights. I identify trends, patterns, and correlations to support
+                                strategic decision-making.
+                            </p>
+
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Data Cleaning and Preprocessing.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Exploratory Data Analysis (EDA).
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Statistical Analysis.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Trend Identification.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Actionable Business Insights.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services__card">
+                    <h3 class="services__title">Data <br> Visualization</h3>
+
+                    <span class="services__button">
+                        See More <i class='bx bx-right-arrow services__icon'></i>
+                    </span>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title">Data Visualization</h3>
+
+                            <p class="services__modal-description">
+                                I create interactive and visually appealing dashboards that make data easy to
+                                understand. Using tools like Power BI and Tableau, I help stakeholders see the story
+                                behind the numbers.
+                            </p>
+
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Interactive Dashboard Creation.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Visual Reporting & Storytelling.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        KPI Tracking & Monitoring.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Custom Charts & Graphs.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Real-time Data Visualization.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services__card">
+                    <div class="serv">
+                        <h3 class="services__title">SQL <br>Development</h3>
+                        <span class="services__button">See More <i class='bx bx-right-arrow services__icon'></i></span>
+                    </div>
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+                            <h3 class="services__modal-title">SQL Development</h3>
+                            <p class="services__modal-description">I design and implement robust SQL databases and write optimized queries to extract, transform, and report on business data efficiently and accurately.</p>
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item"><i class='bx bx-check-circle services__modal-icon'></i><p class="services__modal-info">Complex Queries, CTEs and Window Functions.</p></li>
+                                <li class="services__modal-item"><i class='bx bx-check-circle services__modal-icon'></i><p class="services__modal-info">Database Schema Design and Modeling.</p></li>
+                                <li class="services__modal-item"><i class='bx bx-check-circle services__modal-icon'></i><p class="services__modal-info">Views, Triggers and Stored Procedures.</p></li>
+                                <li class="services__modal-item"><i class='bx bx-check-circle services__modal-icon'></i><p class="services__modal-info">Query Optimization and Performance Tuning.</p></li>
+                                <li class="services__modal-item"><i class='bx bx-check-circle services__modal-icon'></i><p class="services__modal-info">Data Quality and Validation Checks.</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== WORK ===============-->
+        <section class="work section" id="work">
+            <span class="section__subtitle">My Portfolio</span>
+            <h2 class="section__title">Recent Works</h2>
+
+            <div class="work__filters">
+                <span class="work__item active-work" data-filter="all">All</span>
+                <span class="work__item" data-filter=".data">Data Analysis</span>
+                <span class="work__item" data-filter=".sql">SQL</span>
+                <span class="work__item" data-filter=".ai">AI / Vision</span>
+            </div>
+
+            <div class="work__container container grid">
+
+                <div class="work__card mix data">
+                    <div class="work__thumb"><i class='bx bx-bar-chart-alt-2'></i></div>
+                    <h3 class="work__title">Sales Performance Analysis</h3>
+                    <a href="https://github.com/rSureshKrishna" target="_blank" class="work__button">
+                        Demo <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+
+                <div class="work__card mix sql">
+                    <div class="work__thumb"><i class='bx bx-data'></i></div>
+                    <h3 class="work__title">Lease Management SQL Project</h3>
+                    <a href="https://github.com/rSureshKrishna" target="_blank" class="work__button">
+                        Demo <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+                
+<div class="work__card mix ai">
+                    <div class="work__thumb"><i class='bx bx-camera-movie'></i></div>
+                    <h3 class="work__title">Video Analytics (YOLOv8)</h3>
+                    <a href="https://github.com/rSureshKrishna/Video_Analytics.git" target="_blank" class="work__button">
+                        Demo <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+
+                <div class="work__card mix sql">
+                    <div class="work__thumb"><i class='bx bx-car'></i></div>
+                    <h3 class="work__title">Vehicle Rental System</h3>
+                    <a href="https://github.com/rSureshKrishna" target="_blank" class="work__button">
+                        Demo <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+
+                <div class="work__card mix data">
+                    <div class="work__thumb"><i class='bx bx-table'></i></div>
+                    <h3 class="work__title">Power BI Finance Dashboard</h3>
+                    <a href="https://github.com/rSureshKrishna" target="_blank" class="work__button">
+                        Demo <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+
+                <div class="work__card mix data">
+                    <div class="work__thumb"><i class='bx bx-code-curly'></i></div>
+                    <h3 class="work__title">Portfolio Website</h3>
+                    <a href="https://github.com/rSureshKrishna/portfolio.git" target="_blank" class="work__button">
+                        Demo <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!--=============== projectS ===============-->
+       <!-- <section class="project section">
+            <span class="section__subtitle">My Projects</span>
+            <h2 class="section__title">Projects</h2>
+
+            <div class="project__container container swiper">
+                <div class="swiper-wrapper">
+                    <div class="project__card swiper-slide">
+                        <img src="assets/img/ssm.png" alt="" class="project__img">
+
+                        <h3 class="project__name">Soil Nutrition Monitoring</h3>
+                        <p class="project__description">
+                            Soil nutrition monitoring tracks nutrients like nitrogen and phosphorus to keep crops
+                            healthy. Sensors and technology provide real-time data for better farming decisions.
+                        </p>
+                        <a href="https://wokwi.com/projects/399750974228674561" class="work__button">
+                            link <i class='bx bx-right-arrow work__icon'></i>
+                        </a>
+                    </div>
+
+                    <div class="project__card swiper-slide">
+                        <img src="assets/img/optimization.png" alt="" class="project__img">
+
+                        <h3 class="project__name">Sales Performance Analysis for Revenue Optimization</h3>
+                        <p class="project__description">
+                            Analyzed product-wise and region-wise sales using Excel & SQL
+                            Built BI dashboard to track KPIs
+                            Provided insights to improve promotional strategy </p>
+                        <a href="https://wokwi.com/projects/399750974228674561" class="work__button">
+                            link <i class='bx bx-right-arrow work__icon'></i>
+                        </a>
+                    </div>
+
+                    <div class="project__card swiper-slide">
+                        <img src="assets/img/dashboard.png" alt="" class="project__img">
+
+                        <h3 class="project__name">Power BI Finance Dashboard </h3>
+                        <p class="project__description">
+                            Built interactive Power BI dashboards using sample finance datasets.
+                            Created KPIs for revenue, expenses, and monthly trends.
+                            Applied DAX functions for calculated measures.
+                            Enabled self-service reporting for end users. </p>
+                        <a href="https://wokwi.com/projects/399750974228674561" class="work__button">
+                            link <i class='bx bx-right-arrow work__icon'></i>
+                        </a>
+                    </div>
+
+                    <div class="project__card swiper-slide">
+                        <img src="assets/img/sql.png" alt="" class="project__img">
+
+                        <h3 class="project__name">SQL-Based Data Analysis Project </h3>
+                        <p class="project__description">
+                            Wrote optimized SQL queries for data extraction and reporting.
+                            Performed data cleaning and aggregation for analysis.
+                            Ensured data accuracy through validation checks. </p>
+                        <a href="https://wokwi.com/projects/399750974228674561" class="work__button">
+                            link <i class='bx bx-right-arrow work__icon'></i>
+                        </a>
+                    </div>
+
+                    <div class="project__card swiper-slide">
+                        <img src="assets/img/lms.png" alt="" class="project__img">
+
+                        <h3 class="project__name">Lease Management</h3>
+                        <p class="project__description">
+                            Lease management means keeping track of lease agreements for things like properties,
+                            equipment, or vehicles. It helps with managing contracts, payments, and rules. </p>
+                        <a href="#" class="work__button">
+                            link <i class='bx bx-right-arrow work__icon'></i>
+                        </a>
+                    </div>
+
+                    <div class="project__card swiper-slide">
+                        <img src="assets/img/port.png" alt="" class="project__img">
+
+                        <h3 class="project__name">Portfolio</h3>
+                        <p class="project__description">
+                            A portfolio is a collection of work showcasing skills and achievements. It helps
+                            professionals present their best projects to clients or employers.
+                        </p>
+                        <a href="https://github.com/rSureshKrishna/portfolio.git" class="work__button">
+                            link <i class='bx bx-right-arrow work__icon'></i>
+                        </a>
+                    </div>
+                    <div class="project__card swiper-slide">
+                        <img src="assets/img/Food_donation.png" alt="" class="project__img">
+
+                        <h3 class="project__name">Food Donation App</h3>
+                        <p class="project__description">
+                            A food donation web application connects donors with people in need. It helps list food,
+                            coordinate pickups, and involve NGOs or volunteers.
+                        </p>
+                        <a href="#" class="work__button">
+                            link <i class='bx bx-right-arrow work__icon'></i>
+                        </a>
+                    </div>
+                    <div class="project__card swiper-slide">
+                        <img src="assets/img/OIP1.png" alt="" class="project__img">
+
+                        <h3 class="project__name">Video Analytics</h3>
+                        <p class="project__description">
+                            Video analytics processes video footage to detect objects, patterns, and movements. It
+                            is
+                            widely used in security, retail, and traffic monitoring for better decision-making.
+                        </p>
+                        <a href="https://github.com/rSureshKrishna/Video_Analytics.git" class="work__button">
+                            link <i class='bx bx-right-arrow work__icon'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </section> -->
+
+        <!--=============== CONTACT ===============-->
+        <section class="contact section" id="contact">
+            <sapn class="section__subtitle">Get in touch</sapn>
+            <h3 class="section__title">Contact Me</h3>
+
+            <div class="contact__container container grid">
+                <div class="contact__content">
+                    <h3 class="contact__title contact__title-info">Talk to me</h3>
+
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <i class='bx bx-mail-send contact__card-icon'></i>
+                            <h3 class="contact__card-title">Email</h3>
+                            <span class="contact__card-data">rsureshkrishna02@gmail.com</span>
+
+                            <a href="mailto:rsureshkrishna02@gmail.com" target="_blank" class="contact__button">
+                                Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
+                            </a>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class='bx bxl-whatsapp contact__card-icon'></i>
+                            <h3 class="contact__card-title">Whatsapp</h3>
+                            <span class="contact__card-data">9342470575</span>
+
+                            <a href="https://wa.me/919342470575" target="_blank" class="contact__button">
+                                Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
+                            </a>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class='bx bxl-linkedin contact__card-icon'></i>
+                            <h3 class="contact__card-title">Linkedin</h3>
+                            <span class="contact__card-data">Suresh Krishna.R</span>
+
+                            <a href="https://www.linkedin.com/in/sur-kri104" target="_blank"
+                                class="contact__button">
+                                Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__content">
+                    <h3 class="contact__title contact__title-form">Write Me your Message</h3>
+
+                    <form action="" class="contact__form">
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">Name</label>
+                            <input type="text" placeholder="Enter name" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">Mail</label>
+                            <input type="text" placeholder="Enter email" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div contact__form-area">
+                            <label for="" class="contact__form-tag">Message</label>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Write your Message"
+                                class="contact__form-input "></textarea>
+                        </div>
+
+
+                        <button class="button">
+                            Send Message
+                        </button>
+                    </form>
+
+                </div>
+
+        </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <h1 class="footer__title">Suresh Krishna</h1>
+
+            <ul class="footer__list">
+
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Home</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#about" class="footer__link">About</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#skills" class="footer__link">Skills</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#education" class="footer__link">Education</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#work" class="footer__link">Work</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#contact" class="footer__link">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="footer__social">
+                <li class="footer__social-item">
+                    <a href="https://github.com/rSureshKrishna" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-github footer__social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="https://wa.me/919342470575" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-whatsapp footer__social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="https://www.linkedin.com/in/sur-kri104" target="_blank"
+                        class="footer__social-link">
+                        <i class='bx bxl-linkedin footer__social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="#" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram footer__social-icon'></i>
+                    </a>
+                </li>
+            </ul>
+
+            <span class="footer__copy">
+                &#169; 2025 Sureshkrishna. All rights reserved.
+            </span>
+        </div>
+    </footer>
+
+    <!--=============== SCROLLREVEAL ===============-->
+
+    <!-- <script src="assets/js/scrollreveal.min.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MIXITUP FILTER ===============-->
+    <script src="assets/js/mixitup.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    <script>
+        const revealElements = document.querySelectorAll(".reveal");
+
+        const revealOnScroll = () => {
+            revealElements.forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (top < windowHeight - 120) {
+                    el.classList.add("active");
+                }
+            });
+        };
+
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll();
+    </script>
+
+    <!--=============== SKILLS CHARTS ===============-->
+    <script>
+    const grid = 'rgba(255,255,255,0.05)';
+    Chart.defaults.color = 'hsl(219,8%,60%)';
+    Chart.defaults.font.family = "'Poppins',sans-serif";
+
+    const TT = {
+        backgroundColor: 'hsl(219,32%,12%)',
+        borderColor: 'rgba(167,139,250,0.2)',
+        borderWidth: 1,
+        titleColor: 'hsl(219,15%,95%)',
+        bodyColor: 'hsl(219,8%,65%)',
+        padding: 10, cornerRadius: 8,
+        titleFont: {size:11}, bodyFont: {size:10}
+    };
+
+    // ── 1. DATA ANALYSIS — Horizontal Bar (purple tones)
+    new Chart(document.getElementById('chartDataAnalysis'), {
+        type: 'bar',
+        data: {
+            labels: ['Data Cleaning & EDA', 'Dashboard Design', 'KPI Reporting', 'Statistical Analysis'],
+            datasets: [{
+                data: [90, 88, 85, 80],
+                backgroundColor: [
+                    'rgba(167,139,250,0.25)',
+                    'rgba(139,92,246,0.25)',
+                    'rgba(196,181,253,0.25)',
+                    'rgba(109,40,217,0.20)'
+                ],
+                borderColor: [
+                    'hsl(250,66%,75%)',
+                    'hsl(258,60%,66%)',
+                    'hsl(247,72%,84%)',
+                    'hsl(263,70%,50%)'
+                ],
+                borderWidth: 1.5,
+                borderRadius: 6
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {display: false},
+                tooltip: {...TT, callbacks: {label: v => ` ${v.raw}%`}}
+            },
+            scales: {
+                x: {grid: {color: grid}, ticks: {font:{size:9}, callback: v => v+'%'}, max: 100},
+                y: {grid: {display:false}, ticks: {font:{size:10}}}
+            }
+        }
+    });
+
+    // ── 2. SQL SKILLS — Radar (blue tones)
+    new Chart(document.getElementById('chartSQL'), {
+        type: 'radar',
+        data: {
+            labels: ['Joins &\nQueries', 'Window\nFunctions', 'CTEs', 'Query\nOptimization', 'Views &\nTriggers'],
+            datasets: [{
+                label: 'Proficiency',
+                data: [92, 85, 85, 80, 78],
+                borderColor: 'hsl(199,80%,65%)',
+                backgroundColor: 'rgba(99,189,231,0.15)',
+                borderWidth: 2,
+                pointBackgroundColor: 'hsl(199,80%,65%)',
+                pointRadius: 4,
+                pointHoverRadius: 6
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {display: false},
+                tooltip: {...TT, callbacks: {label: v => ` ${v.raw}%`}}
+            },
+            scales: {
+                r: {
+                    grid: {color: grid},
+                    angleLines: {color: grid},
+                    pointLabels: {font: {size: 9}, color: 'hsl(219,8%,65%)'},
+                    ticks: {display: false, backdropColor: 'transparent'},
+                    min: 0, max: 100
+                }
+            }
+        }
+    });
+
+    // ── 3. TOOLS — Polar Rings (CSS, handled separately)
+
+    // ── 4. DB & DATA CONCEPTS — Polar Area Chart (rose/pink tones)
+    new Chart(document.getElementById('chartDB'), {
+        type: 'polarArea',
+        data: {
+            labels: ['ETL Concepts', 'Data Modeling', 'Data Quality & Validation', 'Cloud SQL / BigQuery'],
+            datasets: [{
+                data: [80, 78, 83, 78],
+                backgroundColor: [
+                    'rgba(244,114,182,0.25)',
+                    'rgba(251,113,133,0.25)',
+                    'rgba(253,164,175,0.20)',
+                    'rgba(244,63,94,0.18)'
+                ],
+                borderColor: [
+                    '#f472b6',
+                    '#fb7185',
+                    '#fda4af',
+                    '#f43f5e'
+                ],
+                borderWidth: 1.5
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {boxWidth: 9, font: {size: 10}, padding: 10}
+                },
+                tooltip: {...TT, callbacks: {label: v => ` ${v.label}: ${v.raw}%`}}
+            },
+            scales: {
+                r: {
+                    grid: {color: grid},
+                    ticks: {display: false, backdropColor: 'transparent'},
+                    min: 0
+                }
+            }
+        }
+    });
+
+    // ── KPI Counter Animation
+    const kpiObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (!e.isIntersecting) return;
+            const el = e.target, target = +el.dataset.target, start = performance.now(), dur = 1600;
+            (function tick(now) {
+                const p = Math.min((now - start) / dur, 1), ease = 1 - Math.pow(1 - p, 3);
+                el.textContent = Math.round(ease * target);
+                if (p < 1) requestAnimationFrame(tick); else el.textContent = target;
+            })(start);
+            kpiObs.unobserve(el);
+        });
+    }, {threshold: .5});
+    document.querySelectorAll('.sk-kpi-num').forEach(el => kpiObs.observe(el));
+
+    // ── Polar ring scroll-in animation
+    const ringObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('sk-polar-ring--animate'); ringObs.unobserve(e.target); }
+        });
+    }, {threshold: .3});
+    document.querySelectorAll('.sk-polar-ring').forEach(r => ringObs.observe(r));
+    </script>
+
+
+
+
+</body>
+
+</html>
