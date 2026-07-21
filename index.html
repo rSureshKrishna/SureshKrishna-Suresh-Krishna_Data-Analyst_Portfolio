@@ -155,29 +155,29 @@
 
         <!--=============== SKILLS ===============-->
         <section class="skills section" id="skills">
-            <span class="section__subtitle">My Abilities</span>
+            <span class="section__subtitle">Data Analyst &amp; Data Scientist</span>
             <h2 class="section__title">Technical Skills</h2>
 
             <!-- KPI ROW -->
             <div class="sk-kpi-row container">
-                <div class="sk-kpi-card sk-kpi--purple">
+                <div class="sk-kpi-card">
                     <i class='bx bx-bar-chart-alt-2 sk-kpi-icon'></i>
-                    <div class="sk-kpi-num" data-target="4">7</div>
+                    <div class="sk-kpi-num" data-target="4">0</div>
                     <div class="sk-kpi-label">Projects Built</div>
                 </div>
-                <div class="sk-kpi-card sk-kpi--blue">
+                <div class="sk-kpi-card">
                     <i class='bx bx-data sk-kpi-icon'></i>
-                    <div class="sk-kpi-num" data-target="5">8</div>
+                    <div class="sk-kpi-num" data-target="5">0</div>
                     <div class="sk-kpi-label">Certifications</div>
                 </div>
-                <div class="sk-kpi-card sk-kpi--teal">
+                <div class="sk-kpi-card">
                     <i class='bx bx-trophy sk-kpi-icon'></i>
-                    <div class="sk-kpi-num" data-target="10">8</div>
+                    <div class="sk-kpi-num" data-target="10">0</div>
                     <div class="sk-kpi-label">Papers Presented</div>
                 </div>
-                <div class="sk-kpi-card sk-kpi--rose">
+                <div class="sk-kpi-card">
                     <i class='bx bx-code-alt sk-kpi-icon'></i>
-                    <div class="sk-kpi-num" data-target="12">5</div>
+                    <div class="sk-kpi-num" data-target="12">0</div>
                     <div class="sk-kpi-label">Tools Mastered</div>
                 </div>
             </div>
@@ -189,6 +189,7 @@
                     <button class="sk-tab" data-tab="tools"><i class='bx bx-wrench'></i> Tools</button>
                     <button class="sk-tab" data-tab="db"><i class='bx bx-layer'></i> DB &amp; Concepts</button>
                     <button class="sk-tab" data-tab="ds"><i class='bx bx-brain'></i> Data Science</button>
+                    <button class="sk-tab" data-tab="ai"><i class='bx bx-bot'></i> AI Tools</button>
                 </div>
                 <div class="sk-tab-panels">
                     <div class="sk-tab-panel active" id="tab-analysis">
@@ -198,12 +199,12 @@
                         <div class="sk-chart-constrain"><canvas id="chartSQL"></canvas></div>
                     </div>
                     <div class="sk-tab-panel" id="tab-tools">
-                        <div class="sk-polar-wrap">
-                            <div class="sk-polar-ring" style="--pct:82;--clr:#6ee7b7"><div class="sk-polar-inner"><span class="sk-polar-val">82%</span><span class="sk-polar-lbl">Python</span></div></div>                                                        
-                            <div class="sk-polar-ring" style="--pct:88;--clr:#a7f3d0"><div class="sk-polar-inner"><span class="sk-polar-val">90%</span><span class="sk-polar-lbl">Jupyter Notebook</span></div></div>
-                            <div class="sk-polar-ring" style="--pct:85;--clr:#34d399"><div class="sk-polar-inner"><span class="sk-polar-val">85%</span><span class="sk-polar-lbl">MySQL WB</span></div></div>
-                            <div class="sk-polar-ring" style="--pct:90;--clr:#4ade80"><div class="sk-polar-inner"><span class="sk-polar-val">90%</span><span class="sk-polar-lbl">MS Excel</span></div></div>
-                            <div class="sk-polar-ring" style="--pct:88;--clr:#a7f3d0"><div class="sk-polar-inner"><span class="sk-polar-val">88%</span><span class="sk-polar-lbl">Power BI</span></div></div>
+                        <div class="sk-polar-wrap sk-polar-wrap--5">
+                            <div class="sk-polar-ring" style="--pct:82"><div class="sk-polar-inner"><span class="sk-polar-val">82%</span><span class="sk-polar-lbl">Python</span></div></div>
+                            <div class="sk-polar-ring" style="--pct:90"><div class="sk-polar-inner"><span class="sk-polar-val">90%</span><span class="sk-polar-lbl">Jupyter</span></div></div>
+                            <div class="sk-polar-ring" style="--pct:85"><div class="sk-polar-inner"><span class="sk-polar-val">85%</span><span class="sk-polar-lbl">MySQL WB</span></div></div>
+                            <div class="sk-polar-ring" style="--pct:90"><div class="sk-polar-inner"><span class="sk-polar-val">90%</span><span class="sk-polar-lbl">MS Excel</span></div></div>
+                            <div class="sk-polar-ring" style="--pct:88"><div class="sk-polar-inner"><span class="sk-polar-val">88%</span><span class="sk-polar-lbl">Power BI</span></div></div>
                         </div>
                     </div>
                     <div class="sk-tab-panel" id="tab-db">
@@ -212,42 +213,33 @@
                     <div class="sk-tab-panel" id="tab-ds">
                         <div class="sk-chart-constrain"><canvas id="chartDS"></canvas></div>
                     </div>
+                    <div class="sk-tab-panel" id="tab-ai">
+                        <div class="sk-bar-list">
+                            <div class="sk-bar-item">
+                                <div class="sk-bar-label"><span>ChatGPT (OpenAI)</span><span>88%</span></div>
+                                <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:88%"></div></div>
+                            </div>
+                            <div class="sk-bar-item">
+                                <div class="sk-bar-label"><span>Claude (Anthropic)</span><span>85%</span></div>
+                                <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:85%"></div></div>
+                            </div>
+                            <div class="sk-bar-item">
+                                <div class="sk-bar-label"><span>Google AI Studio</span><span>80%</span></div>
+                                <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:80%"></div></div>
+                            </div>
+                            <div class="sk-bar-item">
+                                <div class="sk-bar-label"><span>GitHub Copilot</span><span>82%</span></div>
+                                <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:82%"></div></div>
+                            </div>
+                            <div class="sk-bar-item">
+                                <div class="sk-bar-label"><span>Agentic AI / Automation</span><span>75%</span></div>
+                                <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:75%"></div></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-<div class="sk-chart-card">
-    <div class="sk-chart-header">
-        <div>
-            <div class="sk-chart-title"><i class='bx bx-bot'></i> AI &amp; Agentic Tools</div>
-            <div class="sk-chart-sub">OpenAI · Claude · Copilot · Gemini</div>
-        </div>
-        <span class="sk-chart-badge sk-badge--purple">Bar Chart</span>
-    </div>
-    <div class="sk-bar-list">
-        <div class="sk-bar-item">
-            <div class="sk-bar-label"><span>ChatGPT (OpenAI)</span><span>88%</span></div>
-            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:88%;--clr:#a78bfa"></div></div>
-        </div>
-        <div class="sk-bar-item">
-            <div class="sk-bar-label"><span>Claude (Anthropic)</span><span>85%</span></div>
-            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:85%;--clr:#c4b5fd"></div></div>
-        </div>
-        <div class="sk-bar-item">
-            <div class="sk-bar-label"><span>Google AI Studio</span><span>80%</span></div>
-            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:80%;--clr:#ddd6fe"></div></div>
-        </div>
-        <div class="sk-bar-item">
-            <div class="sk-bar-label"><span>GitHub Copilot (VS Code)</span><span>82%</span></div>
-            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:82%;--clr:#818cf8"></div></div>
-        </div>
-        <div class="sk-bar-item">
-            <div class="sk-bar-label"><span>Agentic AI / Automation</span><span>75%</span></div>
-            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:75%;--clr:#6366f1"></div></div>
-        </div>
-    </div>
-</div>
-
-            </div>
         </section>
 
         <!--=============== EDUCATION ===============-->
