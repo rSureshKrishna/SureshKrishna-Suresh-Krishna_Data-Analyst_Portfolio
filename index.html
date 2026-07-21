@@ -852,13 +852,27 @@
 
     <!--=============== SKILLS CHARTS ===============-->
     <script>
-    const grid = 'rgba(255,255,255,0.05)';
-    Chart.defaults.color = 'hsl(219,8%,60%)';
+    // ── Portfolio palette (matches --first-color: hsl(250,66%,75%))
+    const P  = 'hsl(250,66%,75%)';          // primary purple
+    const PA = 'hsla(250,66%,75%,0.18)';    // purple fill
+    const P2 = 'hsl(250,66%,60%)';          // darker purple
+    const P2A= 'hsla(250,66%,60%,0.14)';
+    const P3 = 'hsl(250,50%,85%)';          // lighter purple
+    const P3A= 'hsla(250,50%,85%,0.12)';
+    const P4 = 'hsl(268,66%,68%)';          // violet-purple
+    const P4A= 'hsla(268,66%,68%,0.14)';
+    const P5 = 'hsl(235,66%,72%)';          // blue-purple
+    const P5A= 'hsla(235,66%,72%,0.14)';
+
+    const grid = 'hsla(219,8%,75%,0.06)';
+    const textMuted = 'hsl(219,8%,55%)';
+
+    Chart.defaults.color = textMuted;
     Chart.defaults.font.family = "'Poppins',sans-serif";
 
     const TT = {
-        backgroundColor: 'hsl(219,32%,12%)',
-        borderColor: 'rgba(167,139,250,0.2)',
+        backgroundColor: 'hsl(219,32%,10%)',
+        borderColor: 'hsla(250,66%,75%,0.25)',
         borderWidth: 1,
         titleColor: 'hsl(219,15%,95%)',
         bodyColor: 'hsl(219,8%,65%)',
@@ -866,121 +880,113 @@
         titleFont: {size:11}, bodyFont: {size:10}
     };
 
-    // ── 1. DATA ANALYSIS — Horizontal Bar (purple tones)
+    const barOpts = (extra={}) => ({
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend:{display:false}, tooltip:{...TT, callbacks:{label: v=>` ${v.raw}%`}} },
+        scales: {
+            x: { grid:{color:grid}, border:{display:false}, ticks:{font:{size:9}, color:textMuted, callback:v=>v+'%'}, max:100 },
+            y: { grid:{display:false}, border:{display:false}, ticks:{font:{size:10}, color:textMuted} }
+        },
+        ...extra
+    });
+
+    // ── 1. DATA ANALYSIS — Horizontal Bar
     new Chart(document.getElementById('chartDataAnalysis'), {
         type: 'bar',
         data: {
-            labels: ['Data Cleaning & EDA', 'Dashboard Design', 'KPI Reporting', 'Statistical Analysis'],
+            labels: ['Data Cleaning & EDA', 'Dashboard Design & Viz', 'KPI Reporting', 'Statistical Analysis'],
             datasets: [{
                 data: [90, 88, 85, 80],
-                backgroundColor: [
-                    'rgba(167,139,250,0.25)',
-                    'rgba(139,92,246,0.25)',
-                    'rgba(196,181,253,0.25)',
-                    'rgba(109,40,217,0.20)'
-                ],
-                borderColor: [
-                    'hsl(250,66%,75%)',
-                    'hsl(258,60%,66%)',
-                    'hsl(247,72%,84%)',
-                    'hsl(263,70%,50%)'
-                ],
-                borderWidth: 1.5,
-                borderRadius: 6
+                backgroundColor: [PA, P2A, P3A, P4A],
+                borderColor:     [P,  P2,  P3,  P4],
+                borderWidth: 1.5, borderRadius: 6
             }]
         },
-        options: {
-            indexAxis: 'y',
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {display: false},
-                tooltip: {...TT, callbacks: {label: v => ` ${v.raw}%`}}
-            },
-            scales: {
-                x: {grid: {color: grid}, ticks: {font:{size:9}, callback: v => v+'%'}, max: 100},
-                y: {grid: {display:false}, ticks: {font:{size:10}}}
-            }
-        }
+        options: barOpts()
     });
 
-    // ── 2. SQL SKILLS — Radar (blue tones)
+    // ── 2. SQL SKILLS — Radar
     new Chart(document.getElementById('chartSQL'), {
         type: 'radar',
         data: {
-            labels: ['Joins &\nQueries', 'Window\nFunctions', 'CTEs', 'Query\nOptimization', 'Views &\nTriggers'],
+            labels: ['Joins & Queries','Window Functions','CTEs','Query Optimization','Views & Triggers','Subqueries'],
+            datasets: [
+                {
+                    label: 'Suresh',
+                    data: [92, 85, 85, 80, 78, 88],
+                    borderColor: P,
+                    backgroundColor: 'hsla(250,66%,75%,0.1)',
+                    borderWidth: 2,
+                    pointBackgroundColor: P,
+                    pointBorderColor: 'transparent',
+                    pointRadius: 4, pointHoverRadius: 6
+                },
+                {
+                    label: 'Avg',
+                    data: [65, 60, 62, 58, 55, 60],
+                    borderColor: 'hsla(250,66%,75%,0.2)',
+                    backgroundColor: 'hsla(250,66%,75%,0.03)',
+                    borderWidth: 1.5, borderDash: [4,4],
+                    pointBackgroundColor: 'hsla(250,66%,75%,0.3)',
+                    pointRadius: 3
+                }
+            ]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            plugins: {
+                legend: { labels:{ boxWidth:8, font:{size:10}, color:textMuted, padding:12 } },
+                tooltip: {...TT, callbacks:{label: v=>` ${v.dataset.label}: ${v.raw}%`}}
+            },
+            scales: { r: {
+                grid:{color:grid}, angleLines:{color:grid},
+                pointLabels:{font:{size:9}, color:textMuted},
+                ticks:{display:false, backdropColor:'transparent'},
+                min:0, max:100
+            }}
+        }
+    });
+
+    // ── 3. TOOLS — CSS Polar Rings (handled in HTML/CSS)
+
+    // ── 4. DB & DATA CONCEPTS — Doughnut
+    new Chart(document.getElementById('chartDB'), {
+        type: 'doughnut',
+        data: {
+            labels: ['ETL Concepts','Data Modeling','Data Quality','Cloud SQL / BigQuery'],
             datasets: [{
-                label: 'Proficiency',
-                data: [92, 85, 85, 80, 78],
-                borderColor: 'hsl(199,80%,65%)',
-                backgroundColor: 'rgba(99,189,231,0.15)',
-                borderWidth: 2,
-                pointBackgroundColor: 'hsl(199,80%,65%)',
-                pointRadius: 4,
-                pointHoverRadius: 6
+                data: [80, 78, 83, 78],
+                backgroundColor: [PA, P2A, P3A, P4A],
+                borderColor:     [P,  P2,  P3,  P4],
+                borderWidth: 1.5,
+                hoverOffset: 8
             }]
         },
         options: {
-            responsive: true,
-            maintainAspectRatio: false,
+            responsive: true, maintainAspectRatio: false,
+            cutout: '62%',
             plugins: {
-                legend: {display: false},
-                tooltip: {...TT, callbacks: {label: v => ` ${v.raw}%`}}
-            },
-            scales: {
-                r: {
-                    grid: {color: grid},
-                    angleLines: {color: grid},
-                    pointLabels: {font: {size: 9}, color: 'hsl(219,8%,65%)'},
-                    ticks: {display: false, backdropColor: 'transparent'},
-                    min: 0, max: 100
-                }
+                legend: { position:'right', labels:{ boxWidth:9, font:{size:10}, color:textMuted, padding:12 } },
+                tooltip: {...TT, callbacks:{label: v=>` ${v.label}: ${v.raw}%`}}
             }
         }
     });
 
-    // ── 3. TOOLS — Polar Rings (CSS, handled separately)
-
-    // ── 4. DB & DATA CONCEPTS — Polar Area Chart (rose/pink tones)
-    new Chart(document.getElementById('chartDB'), {
-        type: 'polarArea',
+    // ── 5. DATA SCIENCE — Horizontal Bar
+    new Chart(document.getElementById('chartDS'), {
+        type: 'bar',
         data: {
-            labels: ['ETL Concepts', 'Data Modeling', 'Data Quality & Validation', 'Cloud SQL / BigQuery'],
+            labels: ['Python ML Libraries','Predictive Modeling','Computer Vision (YOLOv8)','Feature Engineering','Agentic AI / LLMs'],
             datasets: [{
-                data: [80, 78, 83, 78],
-                backgroundColor: [
-                    'rgba(244,114,182,0.25)',
-                    'rgba(251,113,133,0.25)',
-                    'rgba(253,164,175,0.20)',
-                    'rgba(244,63,94,0.18)'
-                ],
-                borderColor: [
-                    '#f472b6',
-                    '#fb7185',
-                    '#fda4af',
-                    '#f43f5e'
-                ],
-                borderWidth: 1.5
+                data: [82, 75, 78, 72, 70],
+                backgroundColor: [PA, P2A, P3A, P4A, P5A],
+                borderColor:     [P,  P2,  P3,  P4,  P5],
+                borderWidth: 1.5, borderRadius: 6
             }]
         },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    position: 'bottom',
-                    labels: {boxWidth: 9, font: {size: 10}, padding: 10}
-                },
-                tooltip: {...TT, callbacks: {label: v => ` ${v.label}: ${v.raw}%`}}
-            },
-            scales: {
-                r: {
-                    grid: {color: grid},
-                    ticks: {display: false, backdropColor: 'transparent'},
-                    min: 0
-                }
-            }
-        }
+        options: barOpts()
     });
 
     // ── KPI Counter Animation
@@ -995,15 +1001,32 @@
             })(start);
             kpiObs.unobserve(el);
         });
-    }, {threshold: .5});
+    }, {threshold:.5});
     document.querySelectorAll('.sk-kpi-num').forEach(el => kpiObs.observe(el));
 
-    // ── Polar ring scroll-in animation
+    // ── Tab switching
+    document.querySelectorAll('.sk-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.dataset.tab;
+            document.querySelectorAll('.sk-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.sk-tab-panel').forEach(p => p.classList.remove('active'));
+            tab.classList.add('active');
+            document.getElementById('tab-' + target).classList.add('active');
+            if (target === 'tools') {
+                document.querySelectorAll('.sk-polar-ring').forEach(r => {
+                    r.classList.remove('sk-polar-ring--animate');
+                    setTimeout(() => r.classList.add('sk-polar-ring--animate'), 60);
+                });
+            }
+        });
+    });
+
+    // ── Polar ring scroll-in
     const ringObs = new IntersectionObserver(entries => {
         entries.forEach(e => {
             if (e.isIntersecting) { e.target.classList.add('sk-polar-ring--animate'); ringObs.unobserve(e.target); }
         });
-    }, {threshold: .3});
+    }, {threshold:.3});
     document.querySelectorAll('.sk-polar-ring').forEach(r => ringObs.observe(r));
     </script>
 
