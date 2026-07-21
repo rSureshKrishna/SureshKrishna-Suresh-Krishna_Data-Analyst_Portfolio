@@ -182,125 +182,38 @@
                 </div>
             </div>
 
-            
-
-            <!-- 2×2 CHART GRID — one chart per skill category -->
-            <div class="sk-chart-grid container">
-
-                <!-- 1. Data Analysis — Horizontal Bar -->
-                <div class="sk-chart-card">
-                    <div class="sk-chart-header">
-                        <div>
-                            <div class="sk-chart-title"><i class='bx bx-bar-chart-alt-2'></i> Data Analysis</div>
-                            <div class="sk-chart-sub">Cleaning · EDA · KPI · Dashboards</div>
-                        </div>
-                        <span class="sk-chart-badge sk-badge--purple">H-Bar</span>
+            <div class="sk-tabs-card container">
+                <div class="sk-tabs-nav">
+                    <button class="sk-tab active" data-tab="analysis"><i class='bx bx-bar-chart-alt-2'></i> Data Analysis</button>
+                    <button class="sk-tab" data-tab="sql"><i class='bx bx-data'></i> SQL</button>
+                    <button class="sk-tab" data-tab="tools"><i class='bx bx-wrench'></i> Tools</button>
+                    <button class="sk-tab" data-tab="db"><i class='bx bx-layer'></i> DB &amp; Concepts</button>
+                    <button class="sk-tab" data-tab="ds"><i class='bx bx-brain'></i> Data Science</button>
+                </div>
+                <div class="sk-tab-panels">
+                    <div class="sk-tab-panel active" id="tab-analysis">
+                        <div class="sk-chart-constrain"><canvas id="chartDataAnalysis"></canvas></div>
                     </div>
-                    <div class="sk-chart-constrain">
-                        <canvas id="chartDataAnalysis"></canvas>
+                    <div class="sk-tab-panel" id="tab-sql">
+                        <div class="sk-chart-constrain"><canvas id="chartSQL"></canvas></div>
+                    </div>
+                    <div class="sk-tab-panel" id="tab-tools">
+                        <div class="sk-polar-wrap">
+                            <div class="sk-polar-ring" style="--pct:82;--clr:#6ee7b7"><div class="sk-polar-inner"><span class="sk-polar-val">82%</span><span class="sk-polar-lbl">Python</span></div></div>                                                        
+                            <div class="sk-polar-ring" style="--pct:88;--clr:#a7f3d0"><div class="sk-polar-inner"><span class="sk-polar-val">90%</span><span class="sk-polar-lbl">Jupyter Notebook</span></div></div>
+                            <div class="sk-polar-ring" style="--pct:85;--clr:#34d399"><div class="sk-polar-inner"><span class="sk-polar-val">85%</span><span class="sk-polar-lbl">MySQL WB</span></div></div>
+                            <div class="sk-polar-ring" style="--pct:90;--clr:#4ade80"><div class="sk-polar-inner"><span class="sk-polar-val">90%</span><span class="sk-polar-lbl">MS Excel</span></div></div>
+                            <div class="sk-polar-ring" style="--pct:88;--clr:#a7f3d0"><div class="sk-polar-inner"><span class="sk-polar-val">88%</span><span class="sk-polar-lbl">Power BI</span></div></div>
+                        </div>
+                    </div>
+                    <div class="sk-tab-panel" id="tab-db">
+                        <div class="sk-chart-constrain"><canvas id="chartDB"></canvas></div>
+                    </div>
+                    <div class="sk-tab-panel" id="tab-ds">
+                        <div class="sk-chart-constrain"><canvas id="chartDS"></canvas></div>
                     </div>
                 </div>
-
-                <!-- 2. SQL Skills — Radar -->
-                <div class="sk-chart-card">
-                    <div class="sk-chart-header">
-                        <div>
-                            <div class="sk-chart-title"><i class='bx bx-data'></i> SQL Skills</div>
-                            <div class="sk-chart-sub">Queries · CTEs · Optimization · Views</div>
-                        </div>
-                        <span class="sk-chart-badge sk-badge--blue">Radar</span>
-                    </div>
-                    <div class="sk-chart-constrain">
-                        <canvas id="chartSQL"></canvas>
-                    </div>
-                </div>
-
-                <!-- 3. Tools & Technologies — Polar Rings -->
-              <div class="sk-chart-card">
-    <div class="sk-chart-header">
-        <div>
-            <div class="sk-chart-title"><i class='bx bx-wrench'></i> Tools &amp; Technologies</div>
-            <div class="sk-chart-sub">Excel · MySQL · Python · Power BI</div>
-        </div>
-        <span class="sk-chart-badge sk-badge--teal">Bar Chart</span>
-    </div>
-    <div class="sk-bar-list">
-        <div class="sk-bar-item">
-            <div class="sk-bar-label"><span>MS Excel</span><span>90%</span></div>
-            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:90%;--clr:#4ade80"></div></div>
-        </div>
-        <div class="sk-bar-item">
-            <div class="sk-bar-label"><span>MySQL Workbench</span><span>85%</span></div>
-            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:85%;--clr:#34d399"></div></div>
-        </div>
-        <div class="sk-bar-item">
-            <div class="sk-bar-label"><span>Python (Pandas, NumPy)</span><span>82%</span></div>
-            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:82%;--clr:#6ee7b7"></div></div>
-        </div>
-        <div class="sk-bar-item">
-            <div class="sk-bar-label"><span>Power BI</span><span>88%</span></div>
-            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:88%;--clr:#a7f3d0"></div></div>
-        </div>
-    </div>
-</div>  
-
-                <!-- 4. DB & Data Concepts — Doughnut-style grouped bar -->
-                <div class="sk-chart-card">
-    <div class="sk-chart-header">
-        <div>
-            <div class="sk-chart-title"><i class='bx bx-layer'></i> DB &amp; Data Concepts</div>
-            <div class="sk-chart-sub">ETL · Modeling · Quality · Cloud SQL</div>
-        </div>
-        <span class="sk-chart-badge sk-badge--rose">Pie Chart</span>
-    </div>
-    <div class="sk-chart-constrain">
-        <canvas id="chartDB"></canvas>
-    </div>
-</div>
-
-<div class="sk-chart-card">
-    <div class="sk-chart-header">
-        <div>
-            <div class="sk-chart-title"><i class='bx bx-bar-chart-square'></i> Power BI</div>
-            <div class="sk-chart-sub">DAX · Power Query · KPI · Dashboard</div>
-        </div>
-        <span class="sk-chart-badge sk-badge--yellow">Bar Chart</span>
-    </div>
-    <div class="sk-bar-list">
-        <div class="sk-bar-item">
-            <div class="sk-bar-label"><span>Data Visualization</span><span>92%</span></div>
-            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:92%;--clr:#fbbf24"></div></div>
-        </div>
-        <div class="sk-bar-item">
-            <div class="sk-bar-label"><span>DAX Functions</span><span>85%</span></div>
-            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:85%;--clr:#f59e0b"></div></div>
-        </div>
-        <div class="sk-bar-item">
-            <div class="sk-bar-label"><span>Power Query</span><span>82%</span></div>
-            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:82%;--clr:#fb923c"></div></div>
-        </div>
-        <div class="sk-bar-item">
-            <div class="sk-bar-label"><span>KPI Reporting</span><span>90%</span></div>
-            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:90%;--clr:#fcd34d"></div></div>
-        </div>
-        <div class="sk-bar-item">
-            <div class="sk-bar-label"><span>Dashboard Development</span><span>88%</span></div>
-            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:88%;--clr:#fdba74"></div></div>
-        </div>
-        <div class="sk-bar-item">
-            <div class="sk-bar-label"><span>Data Transformation</span><span>84%</span></div>
-            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:84%;--clr:#fde68a"></div></div>
-        </div>
-        <div class="sk-bar-item">
-            <div class="sk-bar-label"><span>Power BI Service</span><span>80%</span></div>
-            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:80%;--clr:#f97316"></div></div>
-        </div>
-        <div class="sk-bar-item">
-            <div class="sk-bar-label"><span>Business Intelligence</span><span>86%</span></div>
-            <div class="sk-bar-track"><div class="sk-bar-fill" style="--w:86%;--clr:#fbbf24"></div></div>
-        </div>
-    </div>
-</div>
+            </div>
 
 <div class="sk-chart-card">
     <div class="sk-chart-header">
