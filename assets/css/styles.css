@@ -689,6 +689,7 @@ body.light-theme {
   justify-content: center;
   gap: 1.5rem;
   padding-top: 1rem;
+  position: relative;
 }
 
 .work__filters {
@@ -720,6 +721,8 @@ body.light-theme {
   flex-direction: column;
   border: 1px solid hsla(var(--first-hue), var(--sat), var(--lig), 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 
 .work__card:hover {
