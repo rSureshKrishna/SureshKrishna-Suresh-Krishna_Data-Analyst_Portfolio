@@ -688,6 +688,7 @@ body.light-theme {
   grid-template-columns: repeat(auto-fill, 300px);
   justify-content: center;
   gap: 1.5rem;
+  align-items: start;
   padding-top: 1rem;
   position: relative;
 }
